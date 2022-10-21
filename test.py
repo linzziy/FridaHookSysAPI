@@ -11,13 +11,15 @@ class HookManager:
     def __init__(self, arg):
         self.arg = arg
         self.js_code = ''
-        self.JS_FILE = 'jscode/'
+        self.JS_FILE = 'jstest/'
         self.load_js()
-        self.log = open('log/' + arg + '.txt', 'w+', encoding='utf-8')
+        self.log = open('log/' + arg + '-test.txt', 'w+', encoding='utf-8')
 
     def load_js(self):
         file_names = os.listdir(self.JS_FILE)
         for filename in file_names:
+            if not '.js' in filename:
+                continue
             print('载入：' + filename)
             with open(self.JS_FILE + filename, 'r', encoding='utf-8') as f:
                 self.js_code += f.read()
@@ -52,9 +54,10 @@ if __name__ == '__main__':
 
     # 启动方法2（执行python文件）：
     # cmd = input('请输入app包名')
-    # cmd = 'MoboReader'
+    cmd = 'iReader'
+    cmd = 'MoboReader'
     # cmd = 'TomatoLiveLibrary'
-    cmd = 'QuickQ'
+    # cmd = 'QuickQ'
 
     print('【开始hook - 安卓】', cmd)
     hk = HookManager(cmd)

@@ -54,10 +54,13 @@ if __name__ == '__main__':
 
     # 启动方法2（执行python文件）：
     # cmd = input('请输入app包名')
-    cmd = 'iReader'
-    cmd = 'MoboReader'
+    # cmd = 'iReader'
+    # cmd = 'MoboReader'
     # cmd = 'TomatoLiveLibrary'
     # cmd = 'QuickQ'
+    # cmd = 'Heat Novel Pro'
+    # cmd = 'NovelNow'
+    cmd = '七猫免费小说'
 
     print('【开始hook - 安卓】', cmd)
     hk = HookManager(cmd)

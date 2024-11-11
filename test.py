@@ -60,7 +60,10 @@ if __name__ == '__main__':
     # cmd = 'QuickQ'
     # cmd = 'Heat Novel Pro'
     # cmd = 'NovelNow'
-    cmd = '七猫免费小说'
+    # cmd = '七猫免费小说'
+    # cmd = 'MyVIB 2.0'
+    # cmd = 'New MaxNovel'
+    cmd = '番茄免费小说'
 
     print('【开始hook - 安卓】', cmd)
     hk = HookManager(cmd)
